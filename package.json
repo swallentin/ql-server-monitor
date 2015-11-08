@@ -1,0 +1,24 @@
+{
+  "name": "ql-server-monitor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "zmq": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node subscribe.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swallentin/ql-server-monitor.git"
+  },
+  "author": "Stephan Wallentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swallentin/ql-server-monitor/issues"
+  },
+  "homepage": "https://github.com/swallentin/ql-server-monitor#readme"
+}
