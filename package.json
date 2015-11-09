@@ -1,6 +1,6 @@
 {
   "name": "ql-server-monitor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -15,7 +15,20 @@
     "type": "git",
     "url": "git+https://github.com/swallentin/ql-server-monitor.git"
   },
-  "keywords": ["zeromq", "zmq", "0mq", "ømq", "quake live", "dedicated", "server", "monitoring", "quake", "live", "rcon", "stats"],
+  "keywords": [
+    "zeromq",
+    "zmq",
+    "0mq",
+    "ømq",
+    "quake live",
+    "dedicated",
+    "server",
+    "monitoring",
+    "quake",
+    "live",
+    "rcon",
+    "stats"
+  ],
   "author": "Stephan Wallentin",
   "license": "ISC",
   "bugs": {
