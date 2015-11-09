@@ -1,16 +1,16 @@
-var serverMonitor = require('../lib/ServerMonitor').create(),
-    Server = require('../lib/Server');
+var monitor = require('../lib/ServerMonitor').create(),
+    Server = require('../lib/Server'),
+    serverGUID = monitor.add(Server.create({
+        name: 'My Server',
+        hostname: '10.0.1.15',
+        gameport: 27960,
+        rcon_port: 28960,
+        rcon_password: 'rcon',
+        stats_port: 27960,
+        stats_password: 'stats'
+    }));
 
-serverMonitor.add(Server.create({
-    name: 'ql-sth-01 #1 #topdog.io',
-    hostname: '5.150.254.201',
-    gameport: 27960,
-    rcon_port: 28960,
-    rcon_password: '',
-    stats_port: 27960,
-    stats_password: ''
-}));
-
+serverGUID = monitor.getIdByHostnameAndGameport('10.0.1.15', 27960);
 
 [
     'PLAYER_CONNECT',
@@ -23,7 +23,10 @@ serverMonitor.add(Server.create({
     'PLAYER_STATS',
     'MATCH_REPORT'
 ].forEach(function (event) {
-    serverMonitor.on(event, function (data) {
-        console.log(data);
+    monitor.on(event, function (data) {
+        console.log(data.TYPE);
     });
 });
+
+monitor.rcon(serverGUID, 'map cure');
+

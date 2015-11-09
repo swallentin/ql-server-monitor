@@ -6,7 +6,9 @@
   "dependencies": {
     "zmq": "^2.13.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "uuid": "^2.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node subscribe.js"
