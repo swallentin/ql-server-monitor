@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "zmq": "^2.13.0"
+    "zmq": "^2.13.0",
+    "uuid": "^2.0.1"
   },
   "devDependencies": {
-    "uuid": "^2.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
