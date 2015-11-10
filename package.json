@@ -1,14 +1,13 @@
 {
   "name": "ql-server-monitor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "zmq": "^2.13.0",
     "uuid": "^2.0.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node subscribe.js"
