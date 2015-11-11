@@ -1,6 +1,6 @@
-var monitor = require('../lib/ServerMonitor').create(),
+var monitor = require('../lib/ServerMonitor').createMonitor(),
     Server = require('../lib/Server'),
-    serverGUID = monitor.add(Server.create({
+    serverGUID = monitor.add(Server.createServer({
         name: 'My Server',
         hostname: '10.0.1.15',
         gameport: 27960,
@@ -30,3 +30,4 @@ serverGUID = monitor.getIdByHostnameAndGameport('10.0.1.15', 27960);
 
 monitor.rcon(serverGUID, 'map cure');
 
+monitor.remove(serverGUID);

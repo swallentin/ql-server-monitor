@@ -2,9 +2,9 @@ A simple and minimalistic server monitor and management for Quake Live Dedicated
 
 ```js
 var ServerMonitor = require('ql-server-monitor'),
-	Server = ServerMonitor.Server,
-	monitor = ServerMonitor.create();
-
+    Server = ServerMonitor.Server;
+	monitor = ServerMonitor.createMonitor(),
+    
 var id = monitor.add(Server.create({
 	name: 'chucksus',
 	hostname: '10.0.1.15',
@@ -46,8 +46,7 @@ $ npm install ql-server-monitor
 * Support for emitting RCON commands to monitored servers.
 
 # Upcoming features
-* Unit-tests
-* Loading server settings from .json configuration file
-* Simplyfied usage of library
-* Improve server monitoring stability, re-connect/retry when connections fail, notifications on connection success and fails, configurable retry/reconnect settings.
 * Ability to create server networks and/or group servers by tag in order to issue Rcon commands selectivly.
+* Improve server monitoring stability, re-connect/retry when connections fail, notifications on connection success and fails, configurable retry/reconnect settings.
+* Simplyfied usage of library
+* Unit-tests
